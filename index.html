@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+  xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link href="favicon.ico" rel="icon">
+  <!-- Judul -->
+  <title>JavFlix</title>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JavFlix - Watch Hottest Content Online" />
+  <meta name="twitter:description" content="Watch exclusive hot content on JavFlix. Stream anywhere, anytime." />
+  <meta name="twitter:image" content="https://bokeh.pages.dev/thumb.jpg" />
+  <meta name="twitter:site" content="@x" />
+	
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://bokeh.pages.dev/" />
+  <meta property="og:site_name" content="JavFlix" />
+  <meta property="og:title" content="JavFlix - Watch Hottest Content Online" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bokeh.pages.dev/thumb.jpg" />
+  <meta property="og:description" content="Watch exclusive hot content on JavFlix. Stream anywhere, anytime." />
+
+  <!-- Keywords -->
+  <meta name="keywords" content="javflix, streaming, adult content, hot videos" />
+
+  <script type='text/javascript' src='//againstmascaraordinal.com/6c/5e/64/6c5e64b2c030e229293b29acdaa24af6.js'></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/Blog" oncontextmenu="return false" ondragstart="return false"
+  onselectstart="return false">
+
+  <!-- Header -->
+  <div class="container header">
+    <div class="container header-content">
+      <a class="logo" href="#" onclick="resetAndLoadVideos()">
+        <i class="fas fa-play-circle"></i>
+        <span>JavFlix</span>
+      </a>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input id="search-input" onkeyup="handleSearch(event)" placeholder="Search videos..." type="text" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="container main-content">
+      <div class="error-message" id="error-message"></div>
+
+      <!-- Videos Container -->
+      <div id="videos-container">
+        <h2 class="section-title">
+          <i class="fas fa-film"></i>
+          <span id="current-category-title">All Videos</span>
+        </h2>
+
+        <!-- Categories -->
+        <div class="categories" id="categories-container">
+          <button class="category-btn active" data-category="0">All</button>
+          <button class="category-btn" data-category="1">Censored</button>
+          <button class="category-btn" data-category="2">Uncensored</button>
+          <button class="category-btn" data-category="3">Uncensored Leaked</button>
+          <button class="category-btn" data-category="4">Amateur</button>
+          <button class="category-btn" data-category="5">Chinese AV</button>
+          <button class="category-btn" data-category="6">Western</button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading">
+          <span class="spinner"></span>
+          <p>Loading videos...</p>
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="no-results" style="display: none;">
+          <i class="fas fa-search"></i>
+          <h3>No videos found</h3>
+          <p>Try changing your search terms or category</p>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid" id="video-grid"></div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+      </div>
+
+      <!-- Video Detail -->
+      <div class="video-detail" id="video-detail">
+        <button class="btn btn-back" id="back-button">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <div class="video-detail-header">
+          <h1 class="video-detail-title" id="detail-title"></h1>
+          <div class="video-detail-meta">
+            <span id="detail-category">
+              <i class="fas fa-tag"></i>
+              <span id="category-text"></span>
+            </span>
+            <span>
+              <i class="fas fa-calendar"></i>
+              <span id="detail-date"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="video-detail-content">
+          <div class="video-player">
+            <img alt="Video Thumbnail" id="detail-thumbnail" src="" />
+            <div class="play-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+
+          <div class="video-details">
+            <div class="video-detail-info">
+              <div class="info-item">
+                <div class="info-label">Director</div>
+                <div id="detail-director"></div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Actors</div>
+                <div id="detail-actors"></div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Description</div>
+                <div id="detail-description"></div>
+              </div>
+              <div class="ads-item">
+                <!-- ads 468x60 placeholder -->
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '73fcc3423b49b61aff9423877cadd7cf',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//againstmascaraordinal.com/73fcc3423b49b61aff9423877cadd7cf/invoke.js"></script>
+                
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <a class="btn btn-primary" href="" id="watch-link" target="_blank">
+                <i class="fas fa-play"></i> Watch Now
+              </a>
+              <button class="btn btn-secondary" onclick="closeVideoDetail()">
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>	    
+    </div>  
+  </div>
+
+  <!-- Go to top button -->
+  <button class="go-top-btn" id="go-top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script type='text/javascript' src='//againstmascaraordinal.com/fe/20/e5/fe20e5f37adca8d88301570d051b0230.js'></script>
+
+</body>
+
+</html>
